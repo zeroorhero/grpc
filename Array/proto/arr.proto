@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "../../common/v1;proto";
+
+message Req{
+  string name = 1;
+}
+
+message Res{
+  string data = 1;
+  repeated int32 id = 2;
+}
+
+service Greet{
+  rpc SayHello(Req) returns (Res);
+}

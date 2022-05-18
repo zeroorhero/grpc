@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "base.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "./;proto";
+service Greet{
+  rpc SayHello(google.protobuf.Empty) returns (Pong);
+}
