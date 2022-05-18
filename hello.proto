@@ -1,0 +1,16 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+option go_package = "./; proto";
+
+message Req{
+  string name = 1;
+  google.protobuf.Timestamp now = 2;
+}
+
+message Res{
+  string data = 1;
+}
+
+service Greet{
+  rpc SayHello(Req) returns (Res);
+}
